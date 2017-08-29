@@ -1,9 +1,16 @@
 function sum (array) {
-  // your code here
+  return array.reduce(function(ele, val){
+    return ele + val;
+  });
 };
 
 function productAll (array) {
-  // your code here
+  var newArr = [];
+  array.reduce(function(ele, val){
+    return val.reduce(function(ele1, val1) {
+      console.log(ele1 * val1);
+    },1) * ele;
+  },1);
 };
 
 function objectify (array) {
